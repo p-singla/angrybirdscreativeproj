@@ -1,6 +1,6 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Hearts
     File: physics_engine.py
 
     Contents: Class Vector
@@ -11,12 +11,6 @@
               func collision_handler, block_collision_handler
 
     Requirements: Pygame, sys, math, random
-
-    By: Jatin Kumar Mandav
-
-    Blog: https://www.jatinmandav.wordpress.com
-    Twitter: @jatinmandav
-    YouTube: https://www.youtube.com/mandav
 
 '''
 import pygame
@@ -67,15 +61,21 @@ class Pig:
         else:
             self.velocity = v
 
-        self.pig1_image = pygame.image.load("Images/pig1.png")
-        self.pig2_image = pygame.image.load("Images/pig3.png")
+        self.pig1_image = pygame.image.load("Images/code.png")
+        self.pig2_image = pygame.image.load("Images/dance.png")
+        self.pig4_image = pygame.image.load("Images/netflix.png")
+        self.pig5_image = pygame.image.load("Images/rapmusic.png")
+        self.pig6_image = pygame.image.load("Images/texas.png")
+        self.pig7_image = pygame.image.load("Images/guitar.png")
+        self.pig8_image = pygame.image.load("Images/rockclimbing.png")
+        self.pig9_image = pygame.image.load("Images/shopping.png")
 
-        self.pig_dead = pygame.image.load("Images/pig_damaged.png")
+        self.pig_dead = pygame.image.load("Images/X.png")
 
         self.bird_image = pygame.image.load("Images/heart.png")
 
         if type == "PIG":
-            self.image = random.choice([self.pig1_image, self.pig2_image])
+            self.image = random.choice([self.pig1_image, self.pig2_image, self.pig4_image, self.pig5_image, self.pig6_image, self.pig7_image, self.pig8_image, self.pig9_image])
         else:
             self.image = self.bird_image
 
@@ -94,8 +94,8 @@ class Pig:
             for point in self.path:
                 pygame.draw.ellipse(display, self.color, (point[0], point[1], 3, 3), 1)
 
-        if (self.type == "PIG") and (not self.animate_count%20) and (not self.isDead):
-            self.image = random.choice([self.pig1_image, self.pig2_image])
+        if (self.type == "PIG") and (not self.animate_count%60) and (not self.isDead):
+            self.image = random.choice([self.pig1_image, self.pig2_image, self.pig4_image, self.pig5_image, self.pig6_image, self.pig7_image, self.pig8_image, self.pig9_image])
 
         display.blit(self.image, (self.x - self.r, self.y - self.r))
 

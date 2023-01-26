@@ -1,17 +1,12 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Hearts
     File: interface.py
 
     Contents: Class Buttons and Class Labels for User Interface
 
     Requirements: Pygame, sys
 
-    By: Jatin Kumar Mandav
-
-    Blog: https://www.jatinmandav.wordpress.com
-    Twitter: @jatinmandav
-    YouTube: https://www.youtube.com/mandav
 
 '''
 import pygame

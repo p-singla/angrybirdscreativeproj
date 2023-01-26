@@ -1,18 +1,12 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Hearts
     File: maps.py
 
     Contents: Class MAPS, that puts everything in action!
 
     Requirements: Pygame, sys
     Supporting Modules: physics_engine, interface, objects
-
-    By: Jatin Kumar Mandav
-
-    Blog: https://www.jatinmandav.wordpress.com
-    Twitter: @jatinmandav
-    YouTube: https://www.youtube.com/mandav
 
 '''
 import pygame
@@ -63,7 +57,7 @@ class Maps:
     def __init__(self):
         self.level = 1
         self.max_level = 15
-        self.color = {'background': (51, 51, 51)}
+        self.color = {'background': (149, 197, 204)}
         self.score = 0
 
     def wait_level(self):
@@ -101,9 +95,6 @@ class Maps:
         exit = interface.Button(1150, 500, 300, 100, close, (241, 148, 138), (245, 183, 177))
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
 
-        mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
-
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -128,7 +119,6 @@ class Maps:
             resume.draw()
             exit.draw()
             pause_text.draw()
-            mandav.draw()
 
             pygame.display.update()
             clock.tick(60)
@@ -373,9 +363,6 @@ class Maps:
         exit = interface.Button(1150, 500, 300, 100, close, (241, 148, 138), (245, 183, 177))
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
 
-        mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
-
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -397,7 +384,6 @@ class Maps:
             exit.draw()
             level_cleared_text.draw()
             score_text.draw()
-            mandav.draw()
 
             pygame.display.update()
             clock.tick(60)
@@ -414,9 +400,6 @@ class Maps:
 
         exit = interface.Button(1000, 500, 300, 100, close, (241, 148, 138), (245, 183, 177))
         exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", self.color['background'])
-
-        mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
 
         while True:
             for event in pygame.event.get():
@@ -436,7 +419,6 @@ class Maps:
             exit.draw()
             level_failed_text.draw()
             score_text.draw()
-            mandav.draw()
 
             pygame.display.update()
             clock.tick(60)
@@ -458,13 +440,10 @@ class Maps:
         score_text.add_text("SCORE: " + str(self.score), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
         birds_remaining = interface.Label(120, 50, 100, 50, None, self.color['background'])
-        birds_remaining.add_text("BIRDS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
+        birds_remaining.add_text("HEARTS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
         pigs_remaining = interface.Label(110, 90, 100, 50, None, self.color['background'])
-        pigs_remaining.add_text("PIGS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
-
-        mandav = interface.Label(width - 270, height + ground - 70, 300, 100, None, self.color['background'])
-        mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", ( 113, 125, 126 ))
+        pigs_remaining.add_text("INTERESTS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
 
         while loop:
             for event in pygame.event.get():
@@ -618,13 +597,11 @@ class Maps:
             score_text.add_text("SCORE: " + str(self.score), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
             score_text.draw()
 
-            birds_remaining.add_text("BIRDS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
+            birds_remaining.add_text("HEARTS REMAINING: " + str(len(birds)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
             birds_remaining.draw()
 
-            pigs_remaining.add_text("PIGS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
+            pigs_remaining.add_text("INTERESTS REMAINING: " + str(len(pigs)), 25, "Fonts/Comic_Kings.ttf", (236, 240, 241))
             pigs_remaining.draw()
-
-            mandav.draw()
 
             pygame.display.update()
 

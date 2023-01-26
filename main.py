@@ -1,6 +1,6 @@
 '''
 
-    Game: Angry Birds
+    Game: Angry Hearts
     File: main.py
 
     Contents: The Main file to Start the Game!
@@ -30,7 +30,7 @@ objects.init(display)
 maps.init(display)
 interface.init(display)
 
-background = (51, 51, 51)
+background = (149, 197, 204)
 
 def close():
     pygame.quit()
@@ -43,7 +43,7 @@ def GAME():
     map = maps.Maps()
 
     welcome = interface.Label(700, 100, 400, 200, None, background)
-    welcome.add_text("ANGRY BIRDS", 80, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
+    welcome.add_text("Angry Hearts", 80, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
 
     start = interface.Button(500, 400, 300, 100, start_game, (244, 208, 63), (247, 220, 111))
     start.add_text("START GAME", 60, "Fonts/arfmoochikncheez.ttf", background)
@@ -51,8 +51,7 @@ def GAME():
     exit = interface.Button(1000, 400, 300, 100, close, (241, 148, 138), (245, 183, 177))
     exit.add_text("QUIT", 60, "Fonts/arfmoochikncheez.ttf", background)
 
-    mandav = interface.Button(width - 300, height - 80, 300, 100, None, background)
-    mandav.add_text("MANDAV", 60, "Fonts/arfmoochikncheez.ttf", (41, 41, 41))
+    
 
     while True:
         for event in pygame.event.get():
@@ -73,7 +72,6 @@ def GAME():
         start.draw()
         exit.draw()
         welcome.draw()
-        mandav.draw()
 
         pygame.display.update()
         clock.tick(60)
