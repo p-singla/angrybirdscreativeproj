@@ -45,6 +45,15 @@ def GAME():
     welcome = interface.Label(700, 100, 400, 200, None, background)
     welcome.add_text("Angry Hearts", 80, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
 
+    caption1 = interface.Label(700, 150, 400, 200, None, background)
+    caption1.add_text("Check out this Angry Birds-inspired game I coded from scratch!", 30, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
+
+    caption2 = interface.Label(700, 200, 400, 200, None, background)
+    caption2.add_text("Launch hearts from a catapult at some of my interests to show them some love!<3", 30, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
+
+    caption3 = interface.Label(700, 250, 400, 200, None, background)
+    caption3.add_text("Hold down your mouse and pull back on the heart to aim and release to launch!", 30, "Fonts/arfmoochikncheez.ttf", (236, 240, 241))
+
     start = interface.Button(500, 400, 300, 100, start_game, (244, 208, 63), (247, 220, 111))
     start.add_text("START GAME", 60, "Fonts/arfmoochikncheez.ttf", background)
 
@@ -70,6 +79,9 @@ def GAME():
         display.fill(background)
 
         start.draw()
+        caption1.draw()
+        caption2.draw()
+        caption3.draw()
         exit.draw()
         welcome.draw()
 
